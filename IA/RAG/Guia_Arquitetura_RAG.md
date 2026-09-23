@@ -50,7 +50,7 @@ print("⚙️ Gerando base de conhecimento vetorial...")
 banco_vetorial = {
     chunk: np.array(obter_embedding(chunk)) for chunk in DOCUMENTACAO_CHUNKS
 }
-
+#Explicação da função abaixo em *** Funções.md ***
 # PASSO 2: Busca Semântica (Retrieval)
 def calcular_similaridade_cosseno(vetor_a, vetor_b) -> float:
     return np.dot(vetor_a, vetor_b) / (np.linalg.norm(vetor_a) * np.linalg.norm(vetor_b))
